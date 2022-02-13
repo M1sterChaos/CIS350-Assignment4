@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Repeats the background when it moves past the player)
+ */
 using UnityEngine;
 
 public class RepeatBackground : MonoBehaviour

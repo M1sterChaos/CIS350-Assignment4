@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Adds score when player jumps above obstacle)
+ */
 using UnityEngine;
 
 public class OnTriggerEnterAddScore : MonoBehaviour

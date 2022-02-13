@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Spawns objects for the game, ie money or obstacles)
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +18,7 @@ public class SpawnManagerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("PrawnsObject", spawnDelay, spawnInterval);
+        InvokeRepeating("SpawnObjects", spawnDelay, spawnInterval);
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerControllerX>();
     }
 

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Controls player actions)
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +23,7 @@ public class MoveLeftX : MonoBehaviour
     void Update()
     {
         // If game is not over, move to the left
-        if (playerControllerScript.gameOver)
+        if (!playerControllerScript.gameOver)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
         }

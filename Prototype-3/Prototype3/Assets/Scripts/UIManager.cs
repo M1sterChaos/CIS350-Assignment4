@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Controls when the player wins or loses)
+ */
 using UnityEngine;
 using UnityEngine.UI;
 

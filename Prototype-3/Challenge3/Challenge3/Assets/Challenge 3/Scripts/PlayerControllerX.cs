@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Controls player actions)
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +14,7 @@ public class PlayerControllerX : MonoBehaviour
     public float floatForce;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
+    private ScoreManager sm;
 
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
@@ -16,11 +22,13 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
-
+    public AudioClip boingSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerRb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
+        sm = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
         Physics.gravity *= gravityModifier;
         playerAudio = GetComponent<AudioSource>();
 
@@ -57,7 +65,12 @@ public class PlayerControllerX : MonoBehaviour
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
-
+            sm.score++;
+        }
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            playerAudio.PlayOneShot(boingSound, 1.0f);
         }
 
     }

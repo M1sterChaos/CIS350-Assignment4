@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Spawns obstacles for the player to jump over)
+ */
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour

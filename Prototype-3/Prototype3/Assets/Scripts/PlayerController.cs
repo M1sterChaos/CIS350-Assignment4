@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Controls all player movements)
+ */
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour

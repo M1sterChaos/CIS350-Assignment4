@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * (Austin Buck)
+ * (Assignment 4)
+ * (Moves obstacles past the player going to the left)
+ */
 using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
