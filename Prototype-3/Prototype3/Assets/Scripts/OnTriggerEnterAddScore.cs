@@ -14,7 +14,7 @@ public class OnTriggerEnterAddScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UIM = GameObject.FindObjectOfType<UIManager>();
+        UIM = GameObject.FindGameObjectWithTag("UIM").GetComponent<UIManager>();
     }
 
     private void OnTriggerEnter(Collider other)
